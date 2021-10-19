@@ -1,0 +1,34 @@
+Jakob Miner		jakob.miner@wsu.edu
+CS427			Cryptography and Network Security
+Project 1		WSU-CRYPT
+20 Mar 2021
+
+A block-encryption algorithm based on Twofish and SKIPJACK
+
+Contents:
+	wsu-crypt.c 	-source code
+	plaintext.txt	-sample plaintext
+	key.txt			-sample key
+	Makefile		-compile program
+	README			-this document
+
+NOTE: Requires a 64bit key(hex). I don't know what will happen if
+	an invalid key is given. I ran out of time to test it.
+
+To build:
+	$ make
+
+To use:
+	$ ./wsu-crypt -e/-d -in <inputfile> -out <outputfile> -k <key>
+
+	arguments may appear in any order, 
+	but files must follow their corresponding flag
+
+Known bugs:
+	the encryption algorithm seems to trip up on newlines. 
+	I have spent time debugging but am out of time to fix, given
+	my current implementation.
+
+	the encryption will hang if given an unusually large file. Due
+	to the way I translated plaintext to hex with a pipe(), if the
+	pipe overfills before finishing translating the input file, it will hang.

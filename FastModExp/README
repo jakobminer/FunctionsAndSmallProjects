@@ -1,0 +1,21 @@
+Jakob Miner			jakob.miner@wsu.edu
+CS427				Crypto & NetSec
+HW 4				20 Mar 2021
+
+Files:
+fast-mod-exp.c
+miller-rabin.c
+Makefile
+README
+
+To build:
+	$ make
+
+Fast Modulo Exponentiation:
+	$ -a <int> -b <int> -n <int>
+
+Miller-Rabin:
+	$ -n <int> -s <int>
+
+Witness:
+	$ -n <int> -a <int>
